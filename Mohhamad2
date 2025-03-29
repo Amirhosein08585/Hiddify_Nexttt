@@ -34,7 +34,10 @@
     ],
     "rules": [
       {
-        "domain": "www.speedtest.net",
+        "domain": [
+          "www.speedtest.net",
+          "hajlab.ucdavis.edu"
+        ],
         "server": "dns-direct"
       },
       {
@@ -57,8 +60,8 @@
         "188.114.97.3",
         "104.17.148.22",
         "104.17.147.22",
-        "2a06:98c1:3120::3",
-        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::1",
+        "2a06:98c1:3121::1",
         "188.114.96.3",
         "188.114.97.3"
       ]
@@ -101,7 +104,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪@Hiddify_nexttt  § 0"
+        "@Hiddify_nexttt +1 § 0",
+        "@Hiddify_nexttt +2 § 1"
       ],
       "default": "auto"
     },
@@ -109,17 +113,35 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪@Hiddify_nexttt  § 0"
+        "@Hiddify_nexttt +1 § 0",
+        "@Hiddify_nexttt +2 § 1"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
     },
     {
       "type": "vless",
-      "tag": "🇩🇪@Hiddify_nexttt  § 0",
+      "tag": "@Hiddify_nexttt +1 § 0",
+      "server": "hajlab.ucdavis.edu",
+      "server_port": 80,
+      "uuid": "4a6bec57-eef0-4e78-baae-d0d1fc6207ce",
+      "transport": {
+        "type": "ws",
+        "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy",
+        "headers": {
+          "Host": "joinshhproxybedeeeeeee.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "@Hiddify_nexttt +2 § 1",
       "server": "www.speedtest.net",
       "server_port": 80,
-      "uuid": "480d2e9b-d8a6-446c-b137-7b1940b99b48",
+      "uuid": "83f8e409-8ca1-4e8c-99e0-3241c964ee08",
       "transport": {
         "type": "ws",
         "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy",
@@ -128,7 +150,7 @@
         },
         "max_early_data": 2048,
         "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
+},
       "packet_encoding": ""
     },
     {
@@ -171,7 +193,7 @@
       },
       {
         "port": 53,
-"outbound": "dns-out"
+        "outbound": "dns-out"
       },
       {
         "clash_mode": "Direct",
@@ -202,4 +224,3 @@
     }
   }
 }
-
