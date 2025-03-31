@@ -47,16 +47,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "2a06:98c1:3121::3",
-        "2a06:98c1:3120::3",
-        "188.114.96.3",
-        "188.114.97.3",
+        "2a06:98c1:3122::",
+        "2a06:98c1:3123::",
+        "188.114.98.0",
+        "188.114.99.0",
         "104.17.148.22",
         "104.17.147.22",
-        "2a06:98c1:3121::3",
-        "2a06:98c1:3120::3",
-        "188.114.97.3",
-        "188.114.96.3"
+        "2a06:98c1:3123::",
+        "2a06:98c1:3122::",
+        "188.114.99.0",
+        "188.114.98.0"
       ]
     },
     "independent_cache": true
@@ -97,7 +97,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "@Hiddify_nexttt +1 § 0"
+        "@Hiddify_nexttt § 0"
       ],
       "default": "auto"
     },
@@ -105,17 +105,17 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "@Hiddify_nexttt +1 § 0"
+        "@Hiddify_nexttt § 0"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
     },
     {
       "type": "vless",
-      "tag": "@Hiddify_nexttt +1 § 0",
+      "tag": "@Hiddify_nexttt § 0",
       "server": "104.19.54.50",
       "server_port": 8080,
-      "uuid": "89944776-5e88-4dd9-bc06-7c18554445a8",
+      "uuid": "962e4859-6bbe-40bb-9c2d-7e4e2b86423c",
       "transport": {
         "type": "ws",
         "path": "/Channel----VPNCUSTOMIZE----VPNCUSTOMIZE----VPNCUSTOMIZE---VPNCUSTOMIZE---VPNCUSTOMIZE---VPNCUSTOMIZE",
