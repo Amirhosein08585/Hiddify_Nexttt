@@ -34,10 +34,7 @@
     ],
     "rules": [
       {
-        "domain": [
-          "www.speedtest.net",
-          "hajlab.ucdavis.edu"
-        ],
+        "domain": "hajlab.ucdavis.edu",
         "server": "dns-direct"
       },
       {
@@ -54,16 +51,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "2a06:98c1:3120::3",
-        "2a06:98c1:3121::3",
         "188.114.96.3",
         "188.114.97.3",
-        "104.17.148.22",
-        "104.17.147.22",
-        "2a06:98c1:3120::3",
         "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3",
+        "104.17.147.22",
+        "104.17.148.22",
+        "188.114.97.3",
         "188.114.96.3",
-        "188.114.97.3"
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3"
       ]
     },
     "independent_cache": true
@@ -104,8 +101,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "@Hiddify_nexttt +1 § 0",
-        "@Hiddify_nexttt +2 § 1"
+        "🇳🇱@Hiddify_nexttt § 0"
       ],
       "default": "auto"
     },
@@ -113,15 +109,14 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "@Hiddify_nexttt +1 § 0",
-        "@Hiddify_nexttt +2 § 1"
+        "🇳🇱@Hiddify_nexttt § 0"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
     },
     {
       "type": "vless",
-      "tag": "@Hiddify_nexttt +1 § 0",
+      "tag": "🇳🇱@Hiddify_nexttt § 0",
       "server": "hajlab.ucdavis.edu",
       "server_port": 80,
       "uuid": "1da29c41-64ba-41de-873d-f23ec4a8e006",
@@ -134,23 +129,6 @@
         "max_early_data": 2048,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
-    },
-    {
-      "type": "vless",
-      "tag": "@Hiddify_nexttt +2 § 1",
-      "server": "www.speedtest.net",
-      "server_port": 80,
-      "uuid": "e39fa654-bfa9-489f-a5f7-f717b2c72622",
-      "transport": {
-        "type": "ws",
-        "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy",
-        "headers": {
-          "Host": "Www.speedtest.net.speedtest2.cfd."
-        },
-        "max_early_data": 2048,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-},
       "packet_encoding": ""
     },
     {
