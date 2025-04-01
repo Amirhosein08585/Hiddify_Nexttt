@@ -56,12 +56,12 @@
       "sky.rethinkdns.com": [
         "2a06:98c1:3121::3",
         "2a06:98c1:3120::3",
-        "188.114.97.3",
         "188.114.96.3",
-        "104.17.148.22",
+        "188.114.97.3",
         "104.17.147.22",
-        "2a06:98c1:3121::3",
+        "104.17.148.22",
         "2a06:98c1:3120::3",
+        "2a06:98c1:3121::3",
         "188.114.96.3",
         "188.114.97.3"
       ]
@@ -124,7 +124,7 @@
       "tag": "@Hiddify_nexttt +1 § 0",
       "server": "hajlab.ucdavis.edu",
       "server_port": 80,
-      "uuid": "4026e7b9-f625-4d42-ada1-6d6cd9bb9c80",
+      "uuid": "f3844ec3-0f09-410b-81a1-eb451843e13f",
       "transport": {
         "type": "ws",
         "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy",
@@ -141,7 +141,7 @@
       "tag": "@Hiddify_nexttt +2 § 1",
       "server": "www.speedtest.net",
       "server_port": 80,
-      "uuid": "7b8520ca-9f32-41b5-bc81-5fccbf81fbe5",
+      "uuid": "b35c61ab-f5b7-4270-8a3c-b6ac403f0b3b",
       "transport": {
         "type": "ws",
         "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy",
