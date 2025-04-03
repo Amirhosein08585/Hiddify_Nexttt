@@ -57,8 +57,8 @@
         "2a06:98c1:3121::3",
         "104.17.147.22",
         "104.17.148.22",
-        "188.114.96.3",
         "188.114.97.3",
+        "188.114.96.3",
         "2a06:98c1:3120::3",
         "2a06:98c1:3121::3"
       ]
@@ -118,8 +118,8 @@
       "type": "vless",
       "tag": "🇨🇭@Hiddify_nexttt § 0",
       "server": "liferobot.darkping.net",
-      "server_port": 1633,
-      "uuid": "66a3724d-8e74-4afe-cc66-4763c0100d95",
+      "server_port": 2593,
+      "uuid": "1f1eb34f-9f6d-4316-b7a7-f95ecb6261bb",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
