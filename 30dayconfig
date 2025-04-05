@@ -35,7 +35,7 @@
     "rules": [
       {
         "domain": [
-          "vpncustomize.fastly80-3.hosting-ip.com",
+          "hajlab.ucdavis.edu",
           "www.speedtest.net"
         ],
         "server": "dns-direct"
@@ -54,16 +54,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.97.3",
         "188.114.96.3",
+        "188.114.97.3",
         "2a06:98c1:3120::3",
         "2a06:98c1:3121::3",
-        "104.17.147.22",
         "104.17.148.22",
+        "104.17.147.22",
         "188.114.96.3",
         "188.114.97.3",
-        "2a06:98c1:3120::3",
-        "2a06:98c1:3121::3"
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3"
       ]
     },
     "independent_cache": true
@@ -104,8 +104,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "@Hiddify_nexttt +1 § 0",
-        "@Hiddify_nexttt +2 § 1"
+        "🇷🇺@Hiddify_nexttt 🇷🇺 § 0",
+        "🇩🇪@Hiddify_nexttt 🇩🇪 § 1"
       ],
       "default": "auto"
     },
@@ -113,23 +113,23 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "@Hiddify_nexttt +1 § 0",
-        "@Hiddify_nexttt +2 § 1"
+        "🇷🇺@Hiddify_nexttt 🇷🇺 § 0",
+        "🇩🇪@Hiddify_nexttt 🇩🇪 § 1"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
     },
     {
       "type": "vless",
-      "tag": "@Hiddify_nexttt +1 § 0",
-      "server": "www.speedtest.net",
-      "server_port": 8880,
-      "uuid": "6a7e6175-21e3-4c9f-b1bd-bd17046d3696",
+      "tag": "🇷🇺@Hiddify_nexttt 🇷🇺 § 0",
+      "server": "hajlab.ucdavis.edu",
+      "server_port": 80,
+      "uuid": "a36abe7e-5728-412c-b505-72ce04363350",
       "transport": {
         "type": "ws",
-        "path": "/Channel----VPNCUSTOMIZE----VPNCUSTOMIZE----VPNCUSTOMIZE---VPNCUSTOMIZE---VPNCUSTOMIZE---VPNCUSTOMIZE",
+        "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy",
         "headers": {
-          "Host": "VPNCUSTOMIZE.www.webdade.com.www.speedtest.net.irna.ir.ips.ddns-ip.net."
+          "Host": "joinshhproxybedeeeeeee.ir"
         },
         "max_early_data": 2048,
         "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -138,16 +138,17 @@
     },
     {
       "type": "vless",
-      "tag": "@Hiddify_nexttt +2 § 1",
-      "server": "VPNCUSTOMIZE.fastly80-3.hosting-ip.com",
+      "tag": "🇩🇪@Hiddify_nexttt 🇩🇪 § 1",
+      "server": "www.speedtest.net",
       "server_port": 80,
-      "uuid": "6a7e6175-21e3-4c9f-b1bd-bd17046d3696",
+      "uuid": "9b531989-aa92-4844-b38c-ba9f0be4e5b1",
       "transport": {
         "type": "ws",
-        "path": "/Channel----VPNCUSTOMIZE----VPNCUSTOMIZE----VPNCUSTOMIZE---VPNCUSTOMIZE---VPNCUSTOMIZE---VPNCUSTOMIZE",
+        "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy",
         "headers": {
-          "Host": "Telegram-VPNCUSTOMIZE-VPNCUSTOMIZE.ir"
+          "Host": "Www.speedtest.net.speedtest2.cfd."
         },
+        "max_early_data": 2048,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
       "packet_encoding": ""
