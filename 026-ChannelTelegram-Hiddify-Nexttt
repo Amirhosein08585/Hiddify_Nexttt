@@ -105,7 +105,7 @@
       "outbounds": [
         "auto",
         "🇷🇺@Hiddify_nexttt  § 0",
-        "vless § 1"
+        "🇩🇪@Hiddify_nexttt  § 1"
       ],
       "default": "auto"
     },
@@ -114,7 +114,7 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺@Hiddify_nexttt  § 0",
-        "vless § 1"
+        "🇩🇪@Hiddify_nexttt  § 1"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s",
@@ -139,7 +139,7 @@
     },
     {
       "type": "vless",
-      "tag": "vless § 1",
+      "tag": "🇩🇪@Hiddify_nexttt  § 1",
       "server": "www.speedtest.net",
       "server_port": 80,
       "uuid": "18ced16a-2f72-4963-bf92-eca8b5a76edb",
@@ -222,7 +222,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "1kdug9hZnPnmmir3"
+      "secret": "G8UrDHKMLMrQCKBR"
     }
   }
 }
