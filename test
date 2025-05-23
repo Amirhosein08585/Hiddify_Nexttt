@@ -1,8 +1,7 @@
 //profile-title: base64:2qnYp9mG2KfZhCDYqtmE2q_Ysdin2YUgQEhpZGRpZnlfTmV4dHR0
 //profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=0; expire=1748174400
+//subscription-userinfo: upload=0; download=0; total=0; expire=1764088800
 #profile-web-page-url: @Hiddify_Nexttt
-
 
 {
   "log": {
@@ -40,6 +39,10 @@
     ],
     "rules": [
       {
+        "domain": "s3.hidemail.app",
+        "server": "dns-direct"
+      },
+      {
         "domain_suffix": ".ir",
         "geosite": "ir",
         "server": "dns-direct"
@@ -53,16 +56,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.96.3",
-        "188.114.97.3",
         "2a06:98c1:3120::3",
         "2a06:98c1:3121::3",
+        "188.114.97.3",
+        "188.114.96.3",
         "104.17.148.22",
         "104.17.147.22",
-        "188.114.96.3",
-        "188.114.97.3",
         "2a06:98c1:3120::3",
-        "2a06:98c1:3121::3"
+        "2a06:98c1:3121::3",
+        "188.114.96.3",
+        "188.114.97.3"
       ]
     },
     "independent_cache": true
@@ -101,7 +104,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮@Hiddify_Nexttt کانال تلگرام 🇫🇮 § 0"
+        "🇷🇺 @Hiddify_nexttt 🇷🇺 § 0"
       ],
       "default": "auto"
     },
@@ -109,32 +112,19 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮@Hiddify_Nexttt کانال تلگرام 🇫🇮 § 0"
+        "🇷🇺 @Hiddify_nexttt 🇷🇺 § 0"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s",
       "idle_timeout": "1h40m0s"
     },
     {
-      "type": "vless",
-      "tag": "🇫🇮@Hiddify_Nexttt کانال تلگرام 🇫🇮 § 0",
-      "server": "65.21.4.165",
-      "server_port": 1618,
-      "uuid": "acd71a14-6f45-4451-b150-daa59dcbe36a",
-      "tls": {
-        "enabled": true,
-        "server_name": "refersion.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "JuB4nVnGF1Z-TLaoeZtXkvsejUguYvBfxhqTb3OmqAE",
-          "short_id": "1b7ce049e7580e86"
-        }
-      },
-      "packet_encoding": ""
+      "type": "shadowsocks",
+      "tag": "🇷🇺 @Hiddify_nexttt 🇷🇺 § 0",
+      "server": "s3.hidemail.app",
+      "server_port": 19634,
+      "method": "chacha20-ietf-poly1305",
+      "password": "h9q2C2V5FdFZWAKWODk8W3"
     },
     {
       "type": "dns",
@@ -204,7 +194,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "aSofEtH8uoUcgbXe"
+      "secret": "4uewJOZMLfC-SWKZ"
     }
   }
 }
