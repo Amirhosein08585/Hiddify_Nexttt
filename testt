@@ -1,0 +1,1007 @@
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "old.afoothabs.monster",
+          "fra5.vpntype.dev",
+          "lon5.vpntype.dev",
+          "beesyar.org",
+          "www2.broadalx.cfd",
+          "sg-ss.ipracevpn.com",
+          "mx2.drawnrisha.one",
+          "hinetiw0k.yooddns.stream",
+          "beta.mattenadene.org",
+          "arxfw2b78fi2q9hzylhn.freesocks.work",
+          "uk-dc1.yangon.club",
+          "media.mothyleela.cfd",
+          "hon5.vpntype.dev",
+          "ams5.vpntype.dev",
+          "sin5.vpntype.dev",
+          "exchange.gameaurela.click",
+          "my.noisydeysy.monster",
+          "h110vpntr.outlinekeys.net",
+          "ca225.vpnbook.com",
+          "h110vpnch.outlinekeys.net",
+          "portal.ninemakeda.cfd",
+          "tel5.vpntype.dev",
+          "ltnl12.saint.ydns.eu"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": []
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        
+        "🇳🇱 The Netherlands § 277",
+        "🇳🇱 The Netherlands § 278",
+        "🇳🇱 The Netherlands § 279",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 280",
+        "🇳🇱 The Netherlands § 281",
+        "🇳🇱 The Netherlands § 282",
+        "🇳🇱 The Netherlands § 283",
+        "🇳🇱 The Netherlands § 284",
+        "🇳🇱 North Holland, NH, The Netherlands § 285",
+        "🇳🇱 The Netherlands § 286",
+        "🇳🇱 The Netherlands § 287",
+        "🇳🇱 The Netherlands § 288",
+        "🇳🇱 The Netherlands § 289",
+        "🇳🇱 The Netherlands § 290",
+        "🇳🇱 The Netherlands § 291",
+        "🇳🇱 The Netherlands § 292",
+        "🇳🇱 The Netherlands § 293",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 294",
+        "🇳🇱 The Netherlands § 295",
+        "🇳🇱 The Netherlands § 296",
+        "🇳🇱 North Holland, NH, The Netherlands § 297",
+        "🇳🇱 The Netherlands § 298",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 299",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 300",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 301",
+        "🇳🇱 The Netherlands § 302",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 303",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 304",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 305",
+        "🇳🇱 The Netherlands § 306",
+        "🇳🇱 The Netherlands § 307",
+        "🇳🇱 The Netherlands § 308",
+        "🇳🇱 The Netherlands § 309",
+        "🇳🇱 The Netherlands § 310",
+        "🇳🇱 The Netherlands § 311",
+        "🇳🇱 The Netherlands § 312",
+        "🇳🇱 The Netherlands § 313",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 314",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 315",
+        "🇳🇱 The Netherlands § 316",
+        "🇳🇱 The Netherlands § 317",
+        "🇳🇱 The Netherlands § 318",
+        "🇳🇱 The Netherlands § 319",
+        "🇳🇱 The Netherlands § 320",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 321",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 322",
+        "🇳🇱 The Netherlands § 323",
+        "🇳🇱 The Netherlands § 324",
+        "🇳🇱 The Netherlands § 325",
+        "🇳🇱 The Netherlands § 326",
+        "🇳🇱 The Netherlands § 327",
+        "🇳🇱 The Netherlands § 328",
+        "🇳🇱 The Netherlands § 329",
+        "🇳🇱 The Netherlands § 330",
+        "🇳🇱 The Netherlands § 331",
+        "🇳🇱 The Netherlands § 332",
+        "🇳🇱 The Netherlands § 333",
+        "🇳🇱 The Netherlands § 334",
+        "🇳🇱 The Netherlands § 335",
+        "🇳🇱 North Holland, NH, The Netherlands § 336",
+        "🇳🇱 The Netherlands § 337",
+        "🇳🇱 The Netherlands § 338",
+        "🇳🇱 The Netherlands § 339",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 340",
+        "🇳🇱 The Netherlands § 341",
+        "🇳🇱 The Netherlands § 342",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 343",
+        "🇳🇱 The Netherlands § 344",
+        "🇳🇱 The Netherlands § 345",
+        "🇳🇱 The Netherlands § 346",
+        "🇳🇱 The Netherlands § 347",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 348",
+        "🇳🇱 The Netherlands § 349",
+        "🇳🇱 The Netherlands § 350",
+        "🇳🇱 The Netherlands § 351",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 352",
+        "🇳🇱 The Netherlands § 353",
+        "🇳🇱 Meppel, DR, The Netherlands § 354",
+        "🇳🇱 The Netherlands § 355",
+        "🇳🇱 The Netherlands § 356"
+             ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+       "🇳🇱 The Netherlands § 277",
+        "🇳🇱 The Netherlands § 278",
+        "🇳🇱 The Netherlands § 279",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 280",
+        "🇳🇱 The Netherlands § 281",
+        "🇳🇱 The Netherlands § 282",
+        "🇳🇱 The Netherlands § 283",
+        "🇳🇱 The Netherlands § 284",
+        "🇳🇱 North Holland, NH, The Netherlands § 285",
+        "🇳🇱 The Netherlands § 286",
+        "🇳🇱 The Netherlands § 287",
+        "🇳🇱 The Netherlands § 288",
+        "🇳🇱 The Netherlands § 289",
+        "🇳🇱 The Netherlands § 290",
+        "🇳🇱 The Netherlands § 291",
+        "🇳🇱 The Netherlands § 292",
+        "🇳🇱 The Netherlands § 293",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 294",
+        "🇳🇱 The Netherlands § 295",
+        "🇳🇱 The Netherlands § 296",
+        "🇳🇱 North Holland, NH, The Netherlands § 297",
+        "🇳🇱 The Netherlands § 298",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 299",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 300",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 301",
+        "🇳🇱 The Netherlands § 302",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 303",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 304",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 305",
+        "🇳🇱 The Netherlands § 306",
+        "🇳🇱 The Netherlands § 307",
+        "🇳🇱 The Netherlands § 308",
+        "🇳🇱 The Netherlands § 309",
+        "🇳🇱 The Netherlands § 310",
+        "🇳🇱 The Netherlands § 311",
+        "🇳🇱 The Netherlands § 312",
+        "🇳🇱 The Netherlands § 313",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 314",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 315",
+        "🇳🇱 The Netherlands § 316",
+        "🇳🇱 The Netherlands § 317",
+        "🇳🇱 The Netherlands § 318",
+        "🇳🇱 The Netherlands § 319",
+        "🇳🇱 The Netherlands § 320",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 321",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 322",
+        "🇳🇱 The Netherlands § 323",
+        "🇳🇱 The Netherlands § 324",
+        "🇳🇱 The Netherlands § 325",
+        "🇳🇱 The Netherlands § 326",
+        "🇳🇱 The Netherlands § 327",
+        "🇳🇱 The Netherlands § 328",
+        "🇳🇱 The Netherlands § 329",
+        "🇳🇱 The Netherlands § 330",
+        "🇳🇱 The Netherlands § 331",
+        "🇳🇱 The Netherlands § 332",
+        "🇳🇱 The Netherlands § 333",
+        "🇳🇱 The Netherlands § 334",
+        "🇳🇱 The Netherlands § 335",
+        "🇳🇱 North Holland, NH, The Netherlands § 336",
+        "🇳🇱 The Netherlands § 337",
+        "🇳🇱 The Netherlands § 338",
+        "🇳🇱 The Netherlands § 339",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 340",
+        "🇳🇱 The Netherlands § 341",
+        "🇳🇱 The Netherlands § 342",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 343",
+        "🇳🇱 The Netherlands § 344",
+        "🇳🇱 The Netherlands § 345",
+        "🇳🇱 The Netherlands § 346",
+        "🇳🇱 The Netherlands § 347",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 348",
+        "🇳🇱 The Netherlands § 349",
+        "🇳🇱 The Netherlands § 350",
+        "🇳🇱 The Netherlands § 351",
+        "🇳🇱 Amsterdam, NH, The Netherlands § 352",
+        "🇳🇱 The Netherlands § 353",
+        "🇳🇱 Meppel, DR, The Netherlands § 354",
+        "🇳🇱 The Netherlands § 355",
+        "🇳🇱 The Netherlands § 356"
+      ],
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
+   
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 277",
+      "server": "193.29.139.157",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 278",
+      "server": "45.158.171.151",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 279",
+      "server": "45.87.175.92",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 280",
+      "server": "ams5.vpntype.dev",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "mvBbwgueMW8Z4ts2"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 281",
+      "server": "45.158.171.146",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "1RWwXhwfAB5gAEozU4G2Pg"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 282",
+      "server": "193.29.139.160",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 283",
+      "server": "193.29.139.251",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 284",
+      "server": "193.29.139.240",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 North Holland, NH, The Netherlands § 285",
+      "server": "89.23.103.125",
+      "server_port": 42090,
+      "method": "chacha20-ietf-poly1305",
+      "password": "uQS5ntVqC00sSKkeNzUiD3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 286",
+      "server": "193.29.139.188",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 287",
+      "server": "45.158.171.110",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 288",
+      "server": "ltnl12.saint.ydns.eu",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 289",
+      "server": "45.158.171.146",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 290",
+      "server": "193.29.139.235",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 291",
+      "server": "45.158.171.151",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 292",
+      "server": "45.87.175.58",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 293",
+      "server": "193.29.139.144",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 294",
+      "server": "208.67.105.196",
+      "server_port": 42029,
+      "method": "chacha20-ietf-poly1305",
+      "password": "SjdGCHwafjktt1rzpGxTKYTvVBWb8Xa6E5DTr6MzbdHQSwvpLiDczj3n6MBjy2uyFSzgqgvCWsDQmpM4VQzfPzyGYF58wdyD"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 295",
+      "server": "193.29.139.141",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 296",
+      "server": "193.29.139.157",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 North Holland, NH, The Netherlands § 297",
+      "server": "89.23.103.125",
+      "server_port": 42090,
+      "method": "chacha20-ietf-poly1305",
+      "password": "O4z5EfeNoD3q4kgmSjBgCU"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 298",
+      "server": "45.158.171.146",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 299",
+      "server": "150.241.69.126",
+      "server_port": 3452,
+      "method": "chacha20-ietf-poly1305",
+      "password": "wIf9eV1B1F28wfcFePDVUK"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 300",
+      "server": "149.34.244.68",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 301",
+      "server": "149.34.244.82",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 302",
+      "server": "45.87.175.10",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 303",
+      "server": "149.34.244.71",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 304",
+      "server": "185.246.153.12",
+      "server_port": 31348,
+      "method": "chacha20-ietf-poly1305",
+      "password": "m6DFCEzRaCPKPR5zC2wTyZcLB8jaSkgCyOjntbGDprozTdoO"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 305",
+      "server": "149.34.244.80",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 306",
+      "server": "45.158.171.60",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 307",
+      "server": "45.158.171.146",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 308",
+      "server": "193.29.139.168",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 309",
+      "server": "exchange.gameaurela.click",
+      "server_port": 52952,
+      "method": "chacha20-ietf-poly1305",
+      "password": "LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 310",
+      "server": "45.87.175.166",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 311",
+      "server": "45.158.171.151",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "1RWwXhwfAB5gAEozU4G2Pg"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 312",
+      "server": "45.87.175.65",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 313",
+      "server": "103.104.247.47",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 314",
+      "server": "213.109.147.242",
+      "server_port": 62685,
+      "method": "chacha20-ietf-poly1305",
+      "password": "VpKABcOpNNA0l5G2AVOmw8"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 315",
+      "server": "my.noisydeysy.monster",
+      "server_port": 42029,
+      "method": "chacha20-ietf-poly1305",
+      "password": "SjdGCHwafjktt1rzpGxTKYTvVBWb8Xa6E5DTr6MzbdHQSwvpLiDczj3n6MBjy2uyFSzgqgvCWsDQmpM4VQzfPzyGYF58wdyD"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 316",
+      "server": "103.104.247.49",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 317",
+      "server": "45.158.171.132",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "fbx1Fw7mENCd7vZMvorQZ5"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 318",
+      "server": "beesyar.org",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 319",
+      "server": "193.29.139.202",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 320",
+      "server": "45.87.175.166",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 321",
+      "server": "208.67.105.87",
+      "server_port": 42501,
+      "method": "chacha20-ietf-poly1305",
+      "password": "nq96KftrZAj3LuFQESqmn44Mo5oCuo2cipoEsae25mrmHG2oJ4VT37scBfVBpN5DWtUELZutVhhXs8Le5B8fZ9hLn9ytwvbf"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 322",
+      "server": "149.34.244.72",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 323",
+      "server": "193.29.139.227",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 324",
+      "server": "45.158.171.70",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 325",
+      "server": "193.29.139.206",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 326",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2BHQp2ZDLeeu7xWBMQDt65g37Ji47ncuzmT3EpBkgnE1qSXeHkSGhPrieQdtP57qqnZTz738ZLpRALmfx1z9kYLWpT2Auv7Z"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 327",
+      "server": "45.87.175.166",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cvII85TrW6n0OGyfpHVS1u"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 328",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "soRy26H5G4e6X9DqmbnYrA3tH4PN6tMYbYWRJFNpaDEjM42YwSZSAHvzagMkZ1UPH4pBhGWRz4KNoMGir864srJeQodYwdbC"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 329",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2TjHK4Ub4q5EuPCCpmjnmXAuukjWgCQspWwLu9zJgVPe552fkJXEiwNwz7U5knT1q28VZGcryu2iKDGyDdWRFHjs83GpX14S"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 330",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qv2XtKxnrjaCW6PoAuiN78FRseLnJfhqRoBjQuZmQ1XrfffLsWmC2BNG9QRkv547aapFDcYpJqfGchyGRU39z8TYZYnHSLzF"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 331",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "fKtg9qhF46CMKV9nXPSkyURBKBdmWhXWCmVMB9LhdDLEgmAaDJJ4XaspAXS9SqHRvZjhLF9u5dfPPZCAYtoAiXrvpgrJBVnU"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 332",
+      "server": "45.87.175.22",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 333",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "CKMoDLN7Tn3YWzwoRBrHNXTZFGeovpjV6iiXZwzz2vNTVsUW5yjT16jfmKNGjWy9vDJRFF299mcxTcy2FZ482ujMcZSNepif"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 334",
+      "server": "45.87.175.28",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 335",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "vTWeKNuhvasYEbJGvzGnep5Y6vWFwpSvjBMRCQN6YuyDyygUhSD8f4pXEzCp5J8s84Eg8voVqa557RSXNsWfwTLJMugRwz37"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 North Holland, NH, The Netherlands § 336",
+      "server": "89.23.103.21",
+      "server_port": 51584,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oYQ8JwEldYn4KT2gfZ6eNl"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 337",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "U2XMN69eVFXTXGrmHrqrMjQMPRzPknkVmYwd4NrWqDyYjgWiueVB56MtTfZVYk9PGzoKnSgRaerXvVQDV5Qsptzi63uTSmbj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 338",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "24LPvN593ULfGF47YmHTYJjDB9J1SdDAnWMNzYxHtj7BLa3XGf1KM1zXBhDG6YyyPst8EW1D7z2DZENbo576wwRyCWikThnv"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 339",
+      "server": "www2.broadalx.cfd",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "KDLuxqPkMFZ9QYNuNsQVoL2SYQzHHpqgzm6aRTrLHouT1ANhscKHcrx75qXWDmV18inTgE2s8BHcvrHBfQ9GixyunwLuteFZ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 340",
+      "server": "ams5.vpntype.dev",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "XBwyda94m3PhJUwG"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 341",
+      "server": "45.87.175.166",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "1RWwXhwfAB5gAEozU4G2Pg"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 342",
+      "server": "45.158.171.66",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 343",
+      "server": "150.241.69.126",
+      "server_port": 3452,
+      "method": "chacha20-ietf-poly1305",
+      "password": "OX76ndgTcyESeUnZe0r5dO"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 344",
+      "server": "beesyar.org",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 345",
+      "server": "103.104.247.72",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 346",
+      "server": "45.158.171.151",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4a2rfixophdjffa8KVA4Aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 347",
+      "server": "193.29.139.177",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 348",
+      "server": "178.208.78.170",
+      "server_port": 23822,
+      "method": "chacha20-ietf-poly1305",
+      "password": "TTRi8jv9gb1rfKPt7omzDK"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 349",
+      "server": "45.87.175.65",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 350",
+      "server": "193.29.139.157",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 351",
+      "server": "45.158.171.132",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Amsterdam, NH, The Netherlands § 352",
+      "server": "149.34.244.77",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 353",
+      "server": "193.29.139.217",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QCXDxuDlTTMD7jtgHUjIoj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Meppel, DR, The Netherlands § 354",
+      "server": "103.106.1.92",
+      "server_port": 23492,
+      "method": "chacha20-ietf-poly1305",
+      "password": "yMX9WGPgUEcRZmlaa0YHHC"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 355",
+      "server": "94.156.79.244",
+      "server_port": 40934,
+      "method": "chacha20-ietf-poly1305",
+      "password": "vTWeKNuhvasYEbJGvzGnep5Y6vWFwpSvjBMRCQN6YuyDyygUhSD8f4pXEzCp5J8s84Eg8voVqa557RSXNsWfwTLJMugRwz37"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 The Netherlands § 356",
+      "server": "141.98.4.67",
+      "server_port": 52952,
+      "method": "chacha20-ietf-poly1305",
+      "password": "LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj"
+    },
+    
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "1-500",
+        "sleep": "0-500"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "update_interval": "120h0m0s"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "AiNLWrD72iNyqzOT"
+    }
+  }
+}
